@@ -76,6 +76,7 @@ function requestObject(options) {
   var requestBody = options.requestBody || null;
   var accept = options.accept || "*/*";
   var contentType = options.contentType || null;
+  var withCredentials = !!options.withCredentials;
 
   return new rsvp.Promise(function(resolve, reject) {
     var client = new HttpRequest();
@@ -83,6 +84,7 @@ function requestObject(options) {
     client.onreadystatechange = createHttpRequestHandler(resolve, reject);
     client.responseType = responseType;
     client.setRequestHeader("Accept", accept);
+    client.withCredentials = withCredentials;
 
     if (requestBody != null) {
       client.setRequestHeader("Content-Type", contentType);
