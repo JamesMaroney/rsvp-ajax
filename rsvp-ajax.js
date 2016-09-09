@@ -67,6 +67,7 @@ function createHttpRequestHandler(resolve, reject) {
  *    <tt>accept</tt> MIME type to be passed in 'Accept' header
  *    <tt>contentType</tt> MIME type to be put to 'Content-Type' header, can be null if requestBody is null
  *    <tt>headers</tt> Custom headers for the HTTP request, accept and contenttype options take precedence
+ *    <tt>withCredentials</tt> set the withCredentials property of the underlying HttpRequest
  *
  * @return A new rsvp.Promise instance
  */
