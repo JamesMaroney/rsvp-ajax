@@ -66,6 +66,7 @@ function createHttpRequestHandler(resolve, reject) {
  *    <tt>responseType</tt> Response type code, can be null - if so, default value 'text' will be picked up
  *    <tt>accept</tt> MIME type to be passed in 'Accept' header
  *    <tt>contentType</tt> MIME type to be put to 'Content-Type' header, can be null if requestBody is null
+ *    <tt>withCredentials</tt> set the withCredentials property of the underlying HttpRequest
  *
  * @return A new rsvp.Promise instance
  */
